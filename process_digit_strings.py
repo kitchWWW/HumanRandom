@@ -1,13 +1,10 @@
-fd = open('raw_data/batch.csv')
+fd = open('raw_data/batch_ds.csv')
 singleFinger = []
 bothFingers = []
 allFingers = []
 
 lineNo = 0
 for l in fd.readlines():
-	if lineNo <2:
-		lineNo+=1
-		continue
 	for i in range(30):
 		portion = l.split(',')[i].replace('"',"").strip()
 		if i > 26 and len(portion) > 100:
