@@ -1,4 +1,4 @@
-fd = open('batch.csv')
+fd = open('raw_data/batch.csv')
 singleFinger = []
 bothFingers = []
 allFingers = []
@@ -23,4 +23,18 @@ print singleFinger
 print bothFingers
 print allFingers
 
+fd = open("datasets/singleFinger.csv",'w')
+for i in singleFinger:
+	fd.write(i+'\n')
+fd.close()
+
+fd = open("datasets/bothFingers.csv",'w')
+for i in bothFingers:
+	fd.write(i+'\n')
+fd.close()
+
+fd = open("datasets/allFingers.csv",'w')
+for i in allFingers:
+	fd.write(i+'\n')
+fd.close()
 
