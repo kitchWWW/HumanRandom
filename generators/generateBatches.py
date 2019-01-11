@@ -1,7 +1,7 @@
 import random
 import numpy as np
 
-fd = open('../datasets/bothFingers.csv')
+fd = open('../datasets/singleFinger.csv')
 stringLength = 30
 positives = []
 lines = fd.readlines()
@@ -18,7 +18,7 @@ for i in range(len(lines)):
 		else:
 			positives.append((bPortion,aPortion))
 
-print positives
+# print positives
 
 
 negatives = []
@@ -41,7 +41,7 @@ for i in range(len(lines)):
 		else:
 			negatives.append((bPortion,aPortion))
 
-print negatives
+# print negatives
 
 batchesBad = []
 
@@ -83,7 +83,7 @@ y_train = np.array(y_train_pre,dtype=np.int)
 x_test = np.array(x_test_pre,dtype=np.int)
 y_test = np.array(y_test_pre,dtype=np.int)
 
-print x_train,y_train
+# print x_train,y_train
 
 
 
