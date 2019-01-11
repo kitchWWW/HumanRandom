@@ -1,18 +1,15 @@
-'''Trains a simple deep NN on the MNIST dataset.
-Gets to 98.40% test accuracy after 20 epochs
-(there is *a lot* of margin for parameter tuning).
-2 seconds per epoch on a K520 GPU.
-'''
-
 from __future__ import print_function
+
 import numpy as np
+
 import keras
 from keras.datasets import mnist
 from keras.models import Sequential
 from keras.layers import Dense, Dropout
 from keras.optimizers import RMSprop
 
-from generateBatches import x_train, y_train, x_test, y_test, stringLength
+#swap this for other gen scripts for other examples
+from gen_captcha_batches import x_train, y_train, x_test, y_test, itemLength
 
 
 batch_size = 128
@@ -22,7 +19,7 @@ epochs = 20
 # the data, split between train and test sets
 
 model = Sequential()
-model.add(Dense(128, activation='sigmoid', input_shape=(stringLength*2,)))
+model.add(Dense(128, activation='sigmoid', input_shape=(itemLength,)))
 model.add(Dropout(0.2))
 model.add(Dense(128, activation='sigmoid'))
 model.add(Dropout(0.2))

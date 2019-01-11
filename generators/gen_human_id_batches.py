@@ -3,6 +3,8 @@ import numpy as np
 
 fd = open('../datasets/singleFinger.csv')
 stringLength = 30
+itemLength = 60
+
 positives = []
 lines = fd.readlines()
 for i in range(len(lines)):
@@ -43,20 +45,20 @@ for i in range(len(lines)):
 
 # print negatives
 
-batchesBad = []
+batchesUnsorted = []
 
 for i in positives:
 	features = list(str(i[0]) + str(i[1]))
 	label = 1
-	batchesBad.append([features,label])
+	batchesUnsorted.append([features,label])
 for i in negatives:
 	features = list(str(i[0]) + str(i[1]))
 	label = 0
-	batchesBad.append([features,label])
+	batchesUnsorted.append([features,label])
 
 batches = []
 
-for b in batchesBad:
+for b in batchesUnsorted:
 	batches.append((b[0],b[1]))
 
 random.shuffle(batches)
