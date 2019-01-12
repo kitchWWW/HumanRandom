@@ -1,4 +1,4 @@
-fd = open('raw_data/batch_ht.csv')
+fd = open('../raw_data/batch_ht.csv')
 headsTails = []
 
 for l in fd.readlines():
@@ -13,7 +13,7 @@ for l in fd.readlines():
 			
 print headsTails
 
-fd = open("datasets/headstails.csv",'w')
+fd = open("../datasets/headstails.csv",'w')
 for i in headsTails:
 	fd.write(i+'\n')
 fd.close()
