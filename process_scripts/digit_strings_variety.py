@@ -21,17 +21,17 @@ print singleFinger
 print bothFingers
 print allFingers
 
-fd = open("../datasets/singleFinger.csv",'w')
+fd = open("../datasets/ds_one.csv",'w')
 for i in singleFinger:
 	fd.write(i+'\n')
 fd.close()
 
-fd = open("../datasets/bothFingers.csv",'w')
+fd = open("../datasets/ds_both.csv",'w')
 for i in bothFingers:
 	fd.write(i+'\n')
 fd.close()
 
-fd = open("../datasets/allFingers.csv",'w')
+fd = open("../datasets/ds_full.csv",'w')
 for i in allFingers:
 	fd.write(i+'\n')
 fd.close()
