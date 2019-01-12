@@ -15,8 +15,10 @@ The datasets were compiled with Amazon Mechanical Turk. The exact batch output d
 There are three directions I would like to take this project, including:
 
 - Generating human-like sequences. This can be trivially accomplished with an rnn I believe.
+	- **update:** done. An RNN from a keras demo was adapted to run on 't/h' data found in the coin flip dataset. This is used now to generate samples and generate human-like random numbers.
 - Person identification. People make their randomness differently, and it has been [shown](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3632045/) that this could be used for identification. Replicating this experiment with ML instead of their tests would be interesting to see if a reasonable improvement can be made.
-	- update: tried this trivially with two 30 char digit-strings, half the examples with both from the same person, and half from different people. A simple classifier could not get more than 60% without overfitting. *need more data!!!!*
+	- **update:** tried this trivially with two 30 char digit-strings, half the examples with both from the same person, and half from different people. A simple classifier could not get more than 60% without overfitting. *need more data!!!!*
 	- More meaningful with the current dataset is an example to differentiate robotic random numbers from human random numbers, which the same classifier could accomplish with ~80% accuracy. 
+- An investigation on the analysis of keyboard type and hand layout and its impact on the task of typing random numbers.
 - Making these projects accessible like in [random.org](http://random.org)
 
